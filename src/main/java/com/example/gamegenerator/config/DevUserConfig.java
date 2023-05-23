@@ -30,7 +30,7 @@ public class DevUserConfig implements ApplicationRunner {
     private String devPassword;
 
     @Value("${app.default-credits}")
-    private int devCredits;
+    private String devCredits;
 
     private static List<Role> devRoles = List.of(Role.USER);
 
@@ -48,6 +48,9 @@ public class DevUserConfig implements ApplicationRunner {
         if (userRepository.count() > 0) {
             return;
         }
+        // parse credits to int
+        int devCredits = Integer.parseInt(this.devCredits);
+        devCredits = devCredits < 0 ? 10 : devCredits;
         devPassword = passwordEncoder.encode(devPassword);
         userRepository.save(new User(devUsername, devPassword, devCredits, devRoles));
     }
