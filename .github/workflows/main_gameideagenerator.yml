@@ -15,6 +15,7 @@ env:
   JDBC_PASSWORD: ${{ secrets.JDBC_PASSWORD }}
   API_KEY: ${{ secrets.API_KEY }}
   IMAGE_API_KEY: ${{ secrets.IMAGE_API_KEY }}
+  TOKEN_SECRET: ${{ secrets.TOKEN_SECRET }}
   TOKEN_ISSUER: ${{ secrets.TOKEN_ISSUER }}
   TOKEN_EXPIRATION: ${{ secrets.TOKEN_EXPIRATION }}
   DEFAULT_USER_NAME: ${{ secrets.DEFAULT_USER_NAME }}
@@ -58,6 +59,7 @@ jobs:
             --build-arg JDBC_PASSWORD=$JDBC_PASSWORD \
             --build-arg API_KEY=$API_KEY \
             --build-arg IMAGE_API_KEY=$IMAGE_API_KEY \
+            --build-arg TOKEN_SECRET=$TOKEN_SECRET \
             --build-arg TOKEN_ISSUER=$TOKEN_ISSUER \
             --build-arg TOKEN_EXPIRATION=$TOKEN_EXPIRATION \
             --build-arg DEFAULT_USER_NAME=$DEFAULT_USER_NAME \
