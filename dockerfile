@@ -36,6 +36,6 @@ COPY . .
 RUN chmod +x mvnw
 RUN ./mvnw package
 
-EXPOSE 8081
+EXPOSE 8080
 
 CMD ["sh", "-c", "java -jar target/GameGenerator-0.0.1-SNAPSHOT.jar"] 
