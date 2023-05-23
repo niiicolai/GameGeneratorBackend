@@ -13,10 +13,13 @@ env:
   JDBC_DATABASE_URL: ${{ secrets.JDBC_DATABASE_URL }}
   JDBC_USERNAME: ${{ secrets.JDBC_USERNAME }}
   JDBC_PASSWORD: ${{ secrets.JDBC_PASSWORD }}
-  APP_TOKEN_ISSUER: ${{ secrets.APP_TOKEN_ISSUER }}
-  APP_SECRET_KEY: ${{ secrets.APP_SECRET_KEY }}
-  MOTOR_API_URL: ${{ secrets.MOTOR_API_URL }}
-  MOTOR_API_KEY: ${{ secrets.MOTOR_API_KEY }}
+  API_KEY: ${{ secrets.API_KEY }}
+  IMAGE_API_KEY: ${{ secrets.IMAGE_API_KEY }}
+  TOKEN_ISSUER: ${{ secrets.TOKEN_ISSUER }}
+  TOKEN_EXPIRATION: ${{ secrets.TOKEN_EXPIRATION }}
+  DEFAULT_USER_NAME: ${{ secrets.DEFAULT_USER_NAME }}
+  DEFAULT_USER_PASS: ${{ secrets.DEFAULT_USER_PASS }}
+  DEFAULT_USER_CREDIT: ${{ secrets.DEFAULT_USER_CREDIT }}
 
 jobs:
   build:
