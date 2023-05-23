@@ -14,7 +14,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
         "http://localhost:5500",
         "http://127.0.0.1:5500",
         "https://gameideagenerator.thomassa.dk",
-        "agreeable-moss-0a2f48003.3.azurestaticapps.net"
+        "agreeable-moss-0a2f48003.3.azurestaticapps.net",
+        "https://clownfish-app-lutrk.ondigitalocean.app"
 
     };
 
