@@ -48,10 +48,7 @@ public class DevUserConfig implements ApplicationRunner {
         if (userRepository.count() > 0) {
             return;
         }
-        // parse credits to int
-        int devCredits = Integer.parseInt(this.devCredits);
-        devCredits = devCredits < 0 ? 10 : devCredits;
         devPassword = passwordEncoder.encode(devPassword);
-        userRepository.save(new User(devUsername, devPassword, devCredits, devRoles));
+        userRepository.save(new User(devUsername, devPassword, 10, devRoles));
     }
 }
