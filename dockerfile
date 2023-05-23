@@ -36,4 +36,4 @@ RUN ./mvnw package
 
 EXPOSE 8081
 
-CMD ["sh", "-c", "java -jar target/GameGenerator-0.0.1-SNAPSHOT.jar"]
+CMD ["sh", "-c", "java -jar target/GameGenerator-0.0.1-SNAPSHOT.jar"] 
