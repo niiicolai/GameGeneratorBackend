@@ -106,6 +106,6 @@ jobs:
             exit
       
       - name: Delete uploaded artifact
-        uses: actions/delete-artifact@v2
+        uses: geekyeggo/delete-artifact@v2
         with:
           name: ${{ secrets.IMAGE_NAME }}
