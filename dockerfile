@@ -24,9 +24,6 @@ ENV DEFAULT_USER_NAME $DEFAULT_USER_NAME
 ENV DEFAULT_USER_PASS $DEFAULT_USER_PASS
 ENV DEFAULT_USER_CREDIT $DEFAULT_USER_CREDIT
 
-# Make an intended error to show build fail
-errrrorrrr
-
 # Install OpenJDK 17 slim
 RUN apt-get update && \
     apt-get install -y openjdk-17-jdk-headless && \
