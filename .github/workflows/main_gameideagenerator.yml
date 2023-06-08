@@ -105,6 +105,7 @@ jobs:
             docker run -d --name ${{ secrets.IMAGE_NAME }} -p ${{ secrets.IMAGE_PORT_OUT }}:${{ secrets.IMAGE_PORT_IN }} ${{ secrets.IMAGE_NAME }}
             exit
       
-      - name: Delete Docker image file
-        run: |
-          rm "${{ secrets.IMAGE_NAME }}.tar"
+      - name: Delete uploaded artifact
+        uses: actions/delete-artifact@v2
+        with:
+          name: ${{ secrets.IMAGE_NAME }}
