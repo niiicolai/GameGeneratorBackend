@@ -107,4 +107,4 @@ jobs:
       
       - name: Delete Docker image file
         run: |
-        rm "${{ secrets.IMAGE_NAME }}.tar"
+          rm "${{ secrets.IMAGE_NAME }}.tar"
